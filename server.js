@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
 
-// removes the limitations of form methods (GET/POST), allows DELETE functionality 
+// removes the limitations of form methods (GET/POST), allows DELETE, PUT (update) functionality 
 app.use(methodOverride('_method'));
 
 // Routes
