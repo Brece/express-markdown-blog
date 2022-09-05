@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <div class="c-container">
+        <h1 class="c-container__title">Blog Articles</h1>
+        <a href="/articles/new" class="c-btn c-btn--success">New Article</a>
+
+        <% articles.forEach(article => { %>
+            <div class="c-card">
+                <div class="c-card__item">
+                    <h4 class="c-card__item__title"><%= article.title %></h4>
+                    <p class="c-card__item__date"><%= article.date.toLocaleDateString() %></p>
+                    <p class="c-card__item__text"><%= article.text %></p>
+                    <p class="c-card__item__text"><%= article.description %></p>
+                    
+                    <%= article.title %>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
