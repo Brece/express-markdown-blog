@@ -5,7 +5,6 @@
     <p class="c-card__text"><%= article.markdown %></p>
     <div class="c-card__btn-container">
         <a href="articles/<%= article.slug %>" class="c-btn c-btn--primary">Read More</a>
-        <a href="">Delete</a>
         <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
             <button type="submit" class="c-btn c-btn--danger">Delete</button>
         </form>

@@ -16,7 +16,7 @@
             <a href="/articles/edit/<%= article.id %>" class="c-btn c-btn--edit">Edit</a>
         </div>
         
-        <p class="c-show__text"><%= article.markdown %></p>
+        <div class="c-show__text"><%- article.sanitizedHtml %></div>
     </div>
 </body>
 </html>
