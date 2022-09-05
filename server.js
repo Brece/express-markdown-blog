@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 const Article = require('./models/article');
 const articleRouter = require('./routes/articles');
 
@@ -22,9 +23,12 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // view engine
 app.set('view engine', 'ejs');
 
-// Routes
 app.use(express.urlencoded({ extended: false }));
 
+// removes the limitations of form methods (GET/POST), allows DELETE functionality 
+app.use(methodOverride('_method'));
+
+// Routes
 app.get('/', async (req, res, next) => {
     const articles = await Article.find().sort({ date: 'desc' });
     res.render('articles/index', { articles: articles });
@@ -32,7 +36,6 @@ app.get('/', async (req, res, next) => {
 
 app.use('/articles', articleRouter);
 
-/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
@@ -48,6 +51,6 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
-*/
+
 
 app.listen(3000);

@@ -3,5 +3,11 @@
     <p class="c-card__date"><%= article.date.toLocaleDateString() %></p>
     <p class="c-card__text"><%= article.description %></p>
     <p class="c-card__text"><%= article.markdown %></p>
-    <a href="articles/<%= article.slug %>" class="c-btn c-btn--primary">Read More</a>
+    <div class="c-card__btn-container">
+        <a href="articles/<%= article.slug %>" class="c-btn c-btn--primary">Read More</a>
+        <a href="">Delete</a>
+        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="c-btn c-btn--danger">Delete</button>
+        </form>
+    </div>
 </div>
