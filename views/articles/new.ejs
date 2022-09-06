@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Blog</title>
 </head>
 <body>
-    <div class="c-container">
-        <h1 class="c-container__title">New Article</h1>
-
-        <form method="POST" action="/articles" class="c-form">
-            <%- include('_form_fields') %> 
-        </form>
+    <div class="o-wrap">
+        <div class="c-container">
+            <h1 class="c-container__title">New Article</h1>
+            
+            <form method="POST" action="/articles" class="c-form">
+                <%- include('_form_fields') %> 
+            </form>
+        </div>
     </div>
 </body>
 </html>

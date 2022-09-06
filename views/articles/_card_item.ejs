@@ -2,11 +2,13 @@
     <h4 class="c-card__title"><%= article.title %></h4>
     <p class="c-card__date"><%= article.date.toLocaleDateString() %></p>
     <p class="c-card__text"><%= article.description %></p>
-    <p class="c-card__text"><%= article.markdown %></p>
-    <div class="c-card__btn-container">
-        <a href="articles/<%= article.slug %>" class="c-btn c-btn--primary">Read More</a>
-        <a href="articles/edit/<%= article.id %>" class="c-btn c-btn--info">
-        Edit</a>
+    <div class="o-wrap-btn">
+        <button class="c-btn c-btn--primary">
+            <a href="articles/<%= article.slug %>">Read More</a>
+        </button>
+        <button class="c-btn c-btn--info">
+            <a href="articles/edit/<%= article.id %>">Edit</a>
+        </button>
         <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
             <button type="submit" class="c-btn c-btn--danger">Delete</button>
         </form>

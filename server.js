@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const methodOverride = require('method-override');
 const Article = require('./models/article');
 const articleRouter = require('./routes/articles');
@@ -35,6 +36,7 @@ app.get('/', async (req, res, next) => {
 });
 
 app.use('/articles', articleRouter);
+app.use(express.static(path.join(__dirname, 'public/stylesheets')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

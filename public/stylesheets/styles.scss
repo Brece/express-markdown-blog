@@ -1,0 +1,163 @@
+@import url('reset.css');
+
+$hspace: 20px;
+$vspace: 20px;
+
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 24px;
+$font-size-xlarge: 32px;
+$font-size-xxlarge: 46px;
+
+.o-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.o-wrap-btn {
+    display: flex;
+}
+
+.c-btn {
+    display: inline-block;
+    margin-bottom: $vspace;
+    margin-right: $hspace/2;
+    padding: $vspace/4 $hspace/2;
+    font-size: $font-size-medium;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+    
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+.c-btn--primary {
+    background-color: rgba(203, 203, 203, .5);
+    &:hover {
+        background-color: rgba(203, 203, 203, 1);
+    }
+}
+.c-btn--secondary {
+    background-color: rgba(249, 38, 38, .5);
+    &:hover {
+        background-color: rgba(249, 38, 38, 1);
+    }
+}
+.c-btn--info {
+    background-color: rgba(76, 189, 255, .5);
+    &:hover {
+        background-color: rgba(76, 189, 255, 1);
+    }
+}
+.c-btn--success {
+    background-color: rgba(9, 242, 126, .5);
+    &:hover {
+        background-color: rgba(9, 242, 126, 1);
+    }
+}
+.c-btn--danger {
+    margin-bottom: 0;
+    background-color: rgba(249, 38, 38, .5);
+    &:hover {
+        background-color: rgba(249, 38, 38, 1);
+    }
+}
+
+.c-container {
+    margin-left: $hspace*2;
+    margin-right: $hspace*2;
+    padding-top: $vspace*4;
+    padding-bottom: $vspace;
+}
+.c-container__title {
+    margin-bottom: $vspace*3;
+    font-size: $font-size-xxlarge;
+    font-weight: bold;
+}
+.c-container__cards {
+    padding-left: $hspace;
+}
+
+.c-card {
+    margin-bottom: $vspace;
+    padding: $vspace/2 0 $vspace/2 $hspace;
+    border-left: 3px solid #494949;
+    background-color: antiquewhite;
+}
+.c-card__title {
+    margin-bottom: $vspace;
+    font-size: $font-size-large;
+    font-weight: bold;
+}
+.c-card__date {
+    margin-bottom: $vspace/2;
+    font-size: $font-size-small;
+    font-weight: lighter;
+    font-style: italic;
+    color: #494949;
+}
+.c-card__text {
+    margin-bottom: $vspace;
+}
+
+.c-show {
+    margin-left: $hspace*2;
+    margin-right: $hspace*2;
+    padding: $vspace*4 0 $vspace;
+}
+.c-show__title {
+    margin-bottom: $vspace*2;
+    font-size: $font-size-xxlarge;
+    font-weight: bold;
+}
+.c-show__date {
+    margin-bottom: $vspace;
+    font-size: $font-size-small;
+    font-weight: lighter;
+    color: #494949;
+}
+.c-show__text {
+    padding: $vspace/2 0 $vspace/2 $hspace;
+    border-left: 3px solid #494949;
+    background-color: antiquewhite;
+    h1 {
+        margin-bottom: $vspace/2;
+    font-size: $font-size-xlarge;
+    font-weight: bold;
+    }
+    h2 {
+        margin-bottom: $vspace/2;
+        font-size: $font-size-large;
+        font-weight: bold;
+    }
+    h3 {
+        margin-bottom: $vspace/2;
+        font-size: $font-size-medium;
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: $vspace/2;
+    }
+    em {
+        font-style: italic;
+    }
+    strong {
+        font-weight: bold;
+    }
+}
+
+.c-form__group {
+    margin-bottom: $vspace;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    label {
+        width: 100px;
+    }
+    input, textarea {
+        flex: 1;
+    }
+}

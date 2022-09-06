@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Article</title>
 </head>
 <body>
-    <div class="c-show">
-        <h4 class="c-show__title"><%= article.title %></h4>
-        <p class="c-show__date"><%= article.date.toLocaleDateString() %></p>
-        
-        <div class="o-wrap-btn">
-            <a href="/" class="c-btn c-btn--secondary">All Articles</a>
-            <a href="/articles/edit/<%= article.id %>" class="c-btn c-btn--edit">Edit</a>
+    <div class="o-wrap">
+        <div class="c-show">
+            <h4 class="c-show__title"><%= article.title %></h4>
+            <p class="c-show__date"><%= article.date.toLocaleDateString() %></p>
+            
+            <div class="o-wrap-btn">
+                <button class="c-btn c-btn--secondary">
+                    <a href="/">All Articles</a>
+                </button>
+                <button class="c-btn c-btn--info">
+                    <a href="/articles/edit/<%= article.id %>">Edit</a>
+                </button>
+            </div>
+            
+            <div class="c-show__text"><%- article.sanitizedHtml %></div>
         </div>
-        
-        <div class="c-show__text"><%- article.sanitizedHtml %></div>
     </div>
 </body>
 </html>
